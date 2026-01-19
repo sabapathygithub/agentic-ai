@@ -23,7 +23,7 @@ This repository contains hands-on examples and experiments for learning about ag
 ## Getting Started
 
 1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
+2. Install dependencies: `uv sync`
 3. Set up your OpenAI API key in your environment
 4. Open and run notebooks in Jupyter
 
