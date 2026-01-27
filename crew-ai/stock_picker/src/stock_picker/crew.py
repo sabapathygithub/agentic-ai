@@ -5,6 +5,9 @@ from typing import List
 from pydantic import BaseModel, Field
 from crewai_tools import SerperDevTool
 from .tools.push_tool import PushNotificationTool
+from crewai.memory import LongTermMemory, ShortTermMemory, EntityMemory
+from crewai.memory.storage.rag_storage import RAGStorage
+from crewai.memory.storage.ltm_sqlite_storage import LTMSQLiteStorage
 
 class TrendingCompany(BaseModel):
     """ A company that is in the news and attracting investor attention. """
@@ -70,5 +73,35 @@ class StockPicker():
             tasks=self.tasks,
             Process=Process.hierarchical,
             verbose=True,
-            manager_agent=manager
+            manager_agent=manager,
+            memory=True,
+            long_term_memory = LongTermMemory(
+                storage = LTMSQLiteStorage(
+                    db_path="./memory/long_term_memory_storage.db"
+                )
+            ),
+            short_term_memory = ShortTermMemory(
+                storage = RAGStorage(
+                        embedder_config={
+                            "provider": "openai",
+                            "config": {
+                                "model": 'text-embedding-3-small'
+                            }
+                        },
+                        type="short_term",
+                        path="./memory/"
+                    )
+            ),
+            entity_memory = EntityMemory(
+                storage=RAGStorage(
+                    embedder_config={
+                        "provider": "openai",
+                        "config": {
+                            "model": 'text-embedding-3-small'
+                        }
+                    },
+                    type="short_term",
+                    path="./memory/"
+                )
+            )
         )
