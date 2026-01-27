@@ -1,0 +1,19 @@
+# Python Program to Calculate the First 10,000 Terms of the Series
+# 1 - 1/3 + 1/5 - 1/7 + ...
+
+# Initialize the total sum
+total = 0.0
+
+# Loop to calculate each term of the series
+for i in range(10000):
+    term = 1 / (2 * i + 1)  # Calculate the term
+    total += term if i % 2 == 0 else -term  # Add or subtract based on index
+
+# Multiply the total by 4 to get the result
+result = total * 4
+
+# Print the result
+print(result)
+
+# Output of the code
+# 3.1414926535900345
