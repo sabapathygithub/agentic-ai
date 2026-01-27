@@ -1,8 +1,8 @@
 find_trending_companies:
   description: >
-    Find the top trending companies in the news in {sector} from India by searching the latest news. Find new companies that you've not found before.
+    Find the top trending companies in the news in {sector} in India by searching the latest news where current year is {current_year}. Find new companies that you've not found before.
   expected_output: >
-    A list of trending companies in {sector} from India
+    A list of trending companies in {sector} in India from {current_year}
   agent: trending_company_finder
   output_file: output/trending_companies.json
 

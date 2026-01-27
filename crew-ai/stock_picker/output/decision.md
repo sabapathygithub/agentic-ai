@@ -1,16 +1,16 @@
 {
   "chosen_company": {
-    "name": "Tata Consultancy Services",
-    "rationale": "TCS is chosen due to its market leadership, robust AI capabilities, and strong future outlook, which makes it a solid investment opportunity."
+    "name": "Videotelephony Technologies",
+    "reason": "Given its strategic expansion plans in India and its positioning to capitalize on the growing video conferencing sector."
   },
-  "not_selected_companies": [
+  "companies_not_selected": [
     {
-      "name": "Cognizant",
-      "reason": "While it is expanding into tier-2 cities and has growth potential, it does not match TCS's established dominance and comprehensive strategy in the AI sector."
+      "name": "Ahex Technologies",
+      "reason": "While Ahex Technologies has a strong position in the AI market and significant growth potential, its current phase of development does not align as closely with immediate market demands compared to the rapid expansion opportunities within Videotelephony Technologies."
     },
     {
-      "name": "Zoho",
-      "reason": "Although Zoho is innovating in the local SaaS market, it lacks the scale and broader market presence compared to TCS and Cognizant."
+      "name": "DataToBiz",
+      "reason": "DataToBiz's advancements in AI and analytics are noteworthy, but the specific and urgent demand for video communication solutions in the current climate positions Videotelephony Technologies as a more attractive investment."
     }
   ]
 }
