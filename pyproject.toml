@@ -12,6 +12,7 @@ dependencies = [
     "langchain>=1.2.7",
     "langchain-community>=0.4.1",
     "langchain-core>=1.2.7",
+    "langchain-experimental>=0.4.1",
     "langchain-openai>=1.1.7",
     "langgraph>=1.0.7",
     "langgraph-checkpoint-sqlite>=3.0.3",
@@ -23,4 +24,5 @@ dependencies = [
     "requests>=2.32.5",
     "rich>=14.2.0",
     "sendgrid>=6.12.5",
+    "wikipedia>=1.4.0",
 ]
